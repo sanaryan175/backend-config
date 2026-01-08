@@ -1,0 +1,17 @@
+{
+  "name": "backend_pro1",
+  "version": "1.0.0",
+  "description": "a backend configuration for a general management web application",
+  "keywords": [
+    "backend",
+    "nodejs",
+    "datamodelling"
+  ],
+  "license": "ISC",
+  "author": "Sanskriti Gupta",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
