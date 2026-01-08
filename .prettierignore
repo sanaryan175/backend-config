@@ -1,0 +1,45 @@
+# Ignore node modules
+node_modules/
+
+# Build output
+dist/
+build/
+out/
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.production
+
+# Dependency lock files (optional)
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Coverage reports
+coverage/
+
+# Cache
+.cache/
+.next/
+.nuxt/
+.vite/
+
+# Public/generated assets
+public/assets/
+public/build/
+
+# Ignore Prettier config itself
+.prettierignore
+
+# Ignore compiled files
+*.min.js
+*.min.css
+
+# Ignore formatting for specific folders/files
+src/vendor/
+src/legacy-code/
