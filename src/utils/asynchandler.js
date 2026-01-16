@@ -11,9 +11,10 @@ const asynchandler=(fn)=>async(req,res,next)=>{
         await fn(req,res,next)
     }
     catch(error){
-        res.status(error.code|| 500).json({
+        res.status(error.statusCode || 500).json({
             success:false,
-            message:error.message
+            message:error.message,
+            errors: error.errors
         })
     }
 }
