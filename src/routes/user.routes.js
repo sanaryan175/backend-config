@@ -13,8 +13,7 @@ import {
     // updateAccountDetails
 } from "../controllers/user.controller.js";
 import {upload} from "../middlewares/multer.middleware.js"
-
-
+import { User } from "../models/user.model.js";
 
 const router = Router()
 
@@ -32,6 +31,22 @@ router.route("/register").post(
     registerUser
     )
 
+// Testing/debug endpoint: list all users (no passwords/tokens)
+router.route("/").get(async (req, res) => {
+    try {
+        const users = await User.find({}).select("-password -refreshToken");
+        res.json({
+            success: true,
+            count: users.length,
+            data: users
+        });
+    } catch (err) {
+        res.status(500).json({
+            success: false,
+            message: err.message
+        });
+    }
+});
 
 // router.route("/login").post(loginUser)
 

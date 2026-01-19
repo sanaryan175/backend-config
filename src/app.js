@@ -1,7 +1,10 @@
 import express from "express"
 import cors from "cors"
 import cookieParser from "cookie-parser"
-
+import multer from "multer"
+import { v2 as cloudinary } from "cloudinary"
+import dotenv from "dotenv";
+dotenv.config({ path: './.env' });
 const app = express()
 
 app.use(cors({
